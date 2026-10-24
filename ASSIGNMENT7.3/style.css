@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 30px 15px;
+    background-color: #172554;
+    color: white;
+}
+
+.header h1 {
+    margin-bottom: 8px;
+}
+
+/* Main container */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+.container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Product listing using Flexbox */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 24px;
+}
+
+/* Individual product card */
+.product-card {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 250px;
+    max-width: 350px;
+    min-width: 0;
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Product image */
+.product-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+/* Product details */
+.product-card h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.price {
+    color: #2563eb;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Product button */
+.product-card button {
+    margin-top: auto;
+    padding: 11px;
+    border: none;
+    border-radius: 6px;
+    background-color: #2563eb;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.product-card button:hover {
+    background-color: #1d4ed8;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #172554;
+    color: white;
+}
+
+/* Mobile responsive design */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px 12px;
+    }
+
+    .product-list {
+        gap: 15px;
+    }
+
+    .product-card {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 100%;
+        max-width: 400px;
+    }
+}
